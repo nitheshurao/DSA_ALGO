@@ -44,6 +44,7 @@ public class Fibonacci {
         if (number == 1 || number == 2) {
             return 1;
         }
+        
         int fibo1 = 1, fibo2 = 1, fibonacci = 1;
         for (int i = 3; i <= number; i++) {
 
