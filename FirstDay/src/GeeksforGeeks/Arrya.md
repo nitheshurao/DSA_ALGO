@@ -176,3 +176,23 @@ sl2:
         Arrays.sort(nums1);
     }
 ```
+
+
+
+``` js
+public static int palinArray(int[] a, int n)
+           {
+                  //add code here.
+                      for(int i=0;i<n;i++) {
+                      int num=0, N=a[i];
+                      while(N!=0) {
+                          num = (num*10) + N%10;
+                          N = N/10;
+                      }
+                      if(num != a[i]) {
+                          return 0;
+                      }
+                  }
+                  return 1;
+           }
+```
