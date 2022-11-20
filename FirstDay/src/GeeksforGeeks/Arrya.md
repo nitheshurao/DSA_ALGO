@@ -196,3 +196,72 @@ public static int palinArray(int[] a, int n)
                   return 1;
            }
 ```
+
+
+- Input:
+N = 6
+arr[] = { 1, 2, 3, 4, 5, 5 }
+Key = 5
+Output:  4 5
+Explanation:
+5 appears first time at index 4 and
+appears last time at index 5.
+```js
+
+
+class Solution
+{ 
+    // Function to find starting and end index 
+    static int[] findIndex(int a[], int N, int key) 
+    { 
+        //code here.
+       boolean startindex= true;
+        boolean endindex= true;
+        int[] arr= new int[2];
+        int start=-1;
+        int end=-1;
+        
+        for(int i=0;i<N;i++){
+            if(a[i]==key&&startindex){
+                start=i;
+                startindex=false;
+            }
+            if(a[i]==key&&!startindex){
+                end=i;
+                endindex=false;
+            }
+        }
+        arr[0]=start;
+        arr[1]=end;
+        
+        return arr;
+        
+    }
+}
+```
+
+
+```js
+
+class Solution {
+    boolean fascinating(long n) {
+        // code here
+        
+     long tm=n*2;
+        long thm=n*3;
+        String a=String.valueOf(n)+String.valueOf(tm)+String.valueOf(thm);
+        char[] ch=a.toCharArray();
+        Arrays.sort(ch);
+        a=new String(ch);
+        
+        String s2="123456789";
+        
+        if(a.equals(s2)){
+            return true;
+        }
+        
+        return false;
+    }
+}
+
+```
