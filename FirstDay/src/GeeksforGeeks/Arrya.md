@@ -265,3 +265,82 @@ class Solution {
 }
 
 ```
+
+
+
+###### Implement Queue using array
+
+```js
+
+class MyQueue {
+
+    int front, rear;
+	int arr[] = new int[100005];
+
+    MyQueue()
+	{
+		front=0;
+		rear=0;
+	}
+	
+	//Function to push an element x in a queue.
+//Function to push an element x in a queue.
+	void push(int x)
+	{
+	    if (rear < arr.length) {
+	        arr[rear++] = x;   
+	    }
+	} 
+
+    //Function to pop an element from queue and return that element.
+	int pop()
+	{
+	    if (front == rear) {
+	        return -1;
+	    }
+		else {
+		    return arr[front++];
+		}
+	} 
+}
+
+
+```
+
+
+
+##### Implement stack using array
+
+
+```js
+
+class MyStack
+{
+    int top;
+	int arr[] = new int[1000];
+
+    MyStack()
+	{
+		top = -1;
+	}
+	
+	//Function to push an integer into the stack.
+    void push(int a)
+	{
+	    // Your code here
+ if (top < (arr.length-1)) {
+	        arr[++top] = a;
+	    }
+	} 
+	
+    //Function to remove an item from top of the stack.
+int pop()
+	{
+        if (top > -1) {
+            return arr[top--];
+        }
+        return -1;
+	}
+}
+
+````
