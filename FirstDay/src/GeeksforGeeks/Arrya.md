@@ -343,4 +343,54 @@ int pop()
 	}
 }
 
-````
+```
+
+
+### binary search
+
+```js
+
+class Solution {
+    int binarysearch(int arr[], int n, int k) {
+        
+  
+        int s = 0 , e = n-1; 
+        
+        int m = s + (e-s)/2; 
+        
+        while(s<=e){
+            
+            if(arr[m] == k)
+             return m;
+             
+             if(arr[m] < k)
+              {
+                  s = m + 1;
+              }
+              if(arr[m] > k){
+                  e = m-1;
+              }
+              m= s+ (e-s)/2;
+        }
+        return -1;
+    }
+}
+```
+- using recursion
+
+```js
+class Solution {
+    int binarysearch(int arr[], int n, int k) {
+        // code here
+       return bin_search(arr,0,n-1,k);
+    }
+    int bin_search(int arr[],int left,int right,int k){
+        if(left > right) return -1;
+        int mid=left +(right-left)/2;
+        if(arr[mid] ==k) return mid;
+        if(arr[mid] < k) return bin_search(arr,mid+1,right,k);
+        else return bin_search(arr,left,mid-1,k);
+    }
+}
+
+```
